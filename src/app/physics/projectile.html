@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+<title>Projectile motion</title>
+<meta charset="utf-8">
+
+<style>
+div#total { width: 720px; height: 420px; }
+div#canvas { width: 440px; height: 420px; }
+div#panel { left: 440px; width: 280px; height: 420px; }
+.pos1 { left: 10px; }
+.pos2 { left: 170px; }
+.pos3 { left: 240px; }
+input[type="text"] { left: 170px; width: 60px; }
+button { width: 260px; }
+</style>
+
+
+
+
+<meta name="description" content="HTML5 app: Projectile motion">
+<meta name="author" content="Walter Fendt">
+<meta name="keywords" content="app, physics, mechanics, projectile motion">
+</head>
+
+<body>
+
+<h1>Projectile Motion</h1>
+
+<p>This HTML5 app shows the <em class="Begriff">motion of a projectile</em>.</p>
+
+<p>The &quot;Reset&quot; button brings the projectile to its initial position. You can start or stop and continue the simulation with the
+other button. If you choose the option &quot;Slow&nbsp;motion&quot;, the movement will be ten times slower. You can vary (within certain limits)
+the values of initial height, initial speed, angle of inclination, mass and gravitational acceleration. The radio buttons give the possibility
+to select one of five physical sizes.</p>
+
+<p>The effect of air resistance is neglected.</p>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=440px height=420px>This browser doesn't support HTML5 canvas!</canvas></div>
+    <div id="panel">
+    <div style="top: 10px;"><button id="bu1" style="background-color: #00ffff;"></button></div>
+    <div style="top: 50px;"><button id="bu2" style="background-color: #ffff00;"></button></div>
+    <div style="top: 95px;"><input type="checkbox" id="cbSlow" name="cbSlow" value=""><label for="cbSlow" id="lbSlow"></label></div>
+    <div style="top: 125px;"><span class="pos1" id="ipHa"></span><input type="text" id="ipHb"><span class="pos3" id="ipHc"></span></div>
+    <div style="top: 155px;"><span class="pos1" id="ipVa"></span><input type="text" id="ipVb"><span class="pos3" id="ipVc"></span></div>
+    <div style="top: 185px;"><span class="pos1" id="ipWa"></span><input type="text" id="ipWb"><span class="pos3" id="ipWc"></span></div>
+    <div style="top: 215px;"><span class="pos1" id="ipMa"></span><input type="text" id="ipMb"><span class="pos3" id="ipMc"></span></div>
+    <div style="top: 245px;"><span class="pos1" id="ipGa"></span><input type="text" id="ipGb"><span class="pos3" id="ipGc"></span></div>
+    <div style="top: 270px; color: #ff0000;"><input type="radio" id="rbY" name="bg" value=""><label for="rbY" id="lbY"></label></div>
+    <div style="top: 295px; color: #ff00ff;"><input type="radio" id="rbV" name="bg" value=""><label for="rbV" id="lbV"></label></div>
+    <div style="top: 320px; color: #0000ff;"><input type="radio" id="rbA" name="bg" value=""><label for="rbA" id="lbA"></label></div>
+    <div style="top: 345px; color: #008020;"><input type="radio" id="rbF" name="bg" value=""><label for="rbF" id="lbF"></label></div>
+    <div style="top: 370px; color: #000000;"><input type="radio" id="rbE" name="bg" value=""><label for="rbE" id="lbE"></label></div>
+    <div style="top: 400px;"><span class="pos1" id="author"></span></div>
+  </div>
+</div>
+
+<script type="text/javascript">endPage("projectile",13,9,2000,17,6,2015);</script>
+
+</body>
+</html>

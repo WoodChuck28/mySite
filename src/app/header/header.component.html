@@ -1,0 +1,59 @@
+
+
+
+<header>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</header>
+
+<mat-toolbar color="primary">
+  <span>
+    <a routerLink="/">cSTEM</a>
+  </span>
+  <span class="spacer"></span>
+  <ul>
+
+    <li>
+      <a *ngIf="userIsAuthenticated" class="dropdown">
+        <button class="dropbtn"  routerLink="/create" >New Post</button>
+      </a>
+    </li>
+    <li>
+      <a *ngIf="userIsAuthenticated" class="dropdown">
+        <button class="dropbtn" onclick="myFunction()">Physics Content
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content" id="myDropdown">
+          <a routerLink="/motion" routerLinkActive="mat-accent">Home</a>
+          <a routerLink="/kinematics">1D and 2D Motion</a>
+          <a routerLink="#">Forces</a>
+          <a routerLink="#">Energy</a>
+        </div>
+      </a>
+    </li>
+    <li>
+      <a><input type="button" id="dropbtn" onclick="location.href='http://localhost:4200/physics';" value="Projectiles" /></a>
+    </li>
+    <li *ngIf="!userIsAuthenticated">
+        <a><input type="button" id="dropbtn" onclick="location.href='http://localhost:4200/motion';" value="Physics Stuff" /></a>
+    </li>
+    <li *ngIf="!userIsAuthenticated">
+        <a><input type="button" id="dropbtn" onclick="location.href='http://localhost:4200/about';" value="About" /></a>
+    </li>
+    <li *ngIf="!userIsAuthenticated">
+        <a><input type="button" id="dropbtn" onclick="location.href='http://localhost:4200/resume';" value="Resume" /></a>
+    </li>
+    <li *ngIf="!userIsAuthenticated">
+        <a><input type="button" id="dropbtn" onclick="location.href='http://localhost:4200/login';" value="Login" /></a>
+    </li>
+    <li *ngIf="!userIsAuthenticated">
+        <a><input type="button" id="dropbtn" onclick="location.href='http://localhost:4200/signup';" value="Signup" /></a>
+    </li>
+    <li><a *ngIf="userIsAuthenticated" class="dropdown">
+        <a><input type="button" id="dropbtn" onclick="location.href='http://localhost:4200/logout';" value="Logout" /></a>
+        </a>
+    </li>
+  </ul>
+
+
+</mat-toolbar>
